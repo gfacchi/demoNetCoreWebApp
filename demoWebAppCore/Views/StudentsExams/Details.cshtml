@@ -1,0 +1,36 @@
+﻿@model demoWebAppCore.Models.StudentsExams
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentsExams</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PpkfkexamNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PpkfkexamNavigation.Subject)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PpkfkstudentNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PpkfkstudentNavigation.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
